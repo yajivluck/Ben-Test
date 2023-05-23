@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="FC15BABEA4092D7B0B50D5F1C8B7298B" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="5.3.2.50247" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
+		<ParsableNamespace AssemblyFileVersion="5.3.2.50247" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
+		<ApplicationVersionInfo Build="5.3.2.50247" Name="Digital Pattern Editor" Version="20.6.0" />
+	</SourceModelFeatureSet>
+	<Project xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="1" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+			<ProjectExplorer />
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="3" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
+			<DefaultTarget />
+			<FileReference Id="126" ModelDefinitionType="PinMap" Name="Soundskrit\.pinmap" StoragePath="Pin Maps\Soundskrit.pinmap" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="134" ModelDefinitionType="SpecificationsDefinition" Name="specsheet\.specs" StoragePath="Specifications\specsheet.specs" />
+			<EmbeddedDefinitionReference Id="163" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}CaptureResultsDefinition" Name="CaptureResults">
+				<CaptureResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="165" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}BurstResultsDefinition" Name="BurstResults">
+				<BurstResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="168" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DigitalScopeDefinition" Name="DigitalScope">
+				<DigitalScopeDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<FileReference Id="175" ModelDefinitionType="PinLevelsDefinition" Name="levelsheet\.digilevels" StoragePath="Digital\Levels\levelsheet.digilevels" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="176" ModelDefinitionType="TimingDefinition" Name="timesets\.digitiming" StoragePath="Digital\Timing\timesets.digitiming" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<EmbeddedDefinitionReference Id="177" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="placeholder_cap\.txt">
+				<ExternalFile>
+					<p.StoragePath>"Digital\\Capture Waveforms\\placeholder_cap.txt"</p.StoragePath>
+				</ExternalFile>
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="178" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="placeholder_pat\.txt">
+				<ExternalFile>
+					<p.StoragePath>"Digital\\Compiled Patterns\\placeholder_pat.txt"</p.StoragePath>
+				</ExternalFile>
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="179" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="placeholder_schmoo\.txt">
+				<ExternalFile>
+					<p.StoragePath>"Digital\\Shmoo\\placeholder_schmoo.txt"</p.StoragePath>
+				</ExternalFile>
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="180" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="placeholder_src\.txt">
+				<ExternalFile>
+					<p.StoragePath>"Digital\\Source Waveforms\\placeholder_src.txt"</p.StoragePath>
+				</ExternalFile>
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="181" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="placeholder_patsrc\.txt">
+				<ExternalFile>
+					<p.StoragePath>"Digital\\Uncompiled Patterns\\placeholder_patsrc.txt"</p.StoragePath>
+				</ExternalFile>
+			</EmbeddedDefinitionReference>
+			<FileReference Id="184" ModelDefinitionType="SourceWaveformDefinition" Name="DUT_Write\.tdms" StoragePath="Digital\Source Waveforms\DUT_Write.tdms" />
+			<FileReference Id="185" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="TRIM_ProgramOTP\.digipat" StoragePath="Digital\Compiled Patterns\TRIM_ProgramOTP.digipat" />
+			<FileReference Id="186" ModelDefinitionType="CaptureWaveformDefinition" Name="DUT_Read\.digicapture" StoragePath="Digital\Capture Waveforms\DUT_Read.digicapture" />
+			<FileReference Id="192" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="TRIM_ReadReg_NmodeTimeout\.digipat" StoragePath="Digital\Compiled Patterns\TRIM_ReadReg_NmodeTimeout.digipat" />
+			<FileReference Id="195" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="TRIM_WriteReg_NmodeTimeout\.digipat" StoragePath="Digital\Compiled Patterns\TRIM_WriteReg_NmodeTimeout.digipat" />
+			<FileReference Id="197" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="TRIM_WriteReg_NmodeCmd\.digipat" StoragePath="Digital\Compiled Patterns\TRIM_WriteReg_NmodeCmd.digipat" />
+			<SourceFileReference Id="200" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}SystemViewDefinition" Name="SystemView\.digisysview" StoragePath="SystemView.digisysview" />
+		</NameScopingEnvoy>
+		<EmbeddedDefinitionReference Id="9" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
+			<ProjectPropertiesDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+		</EmbeddedDefinitionReference>
+	</Project>
+	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

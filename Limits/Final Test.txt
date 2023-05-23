@@ -1,0 +1,80 @@
+<SemiconductorModuleTests>
+	<SequenceName>	<StepName>	<StepId>	<TestName>	<TestNumber>	<Pin>	<LowLimitExpression>	<HighLimitExpression>	<ComparisonType>	<ScalingFactor>	<Units>	<EvaluationType>	<FailBin>	<PublishedDataId>	<TestDataSource>	<ExportLocation>	
+	MainSequence	Continuity	ID#:3MfKqpo85xGnSACALyEibC	Continuity OUTP Voltage	1000	HSD_DUT_OUT_POS	.6	.73	GELE		V	Numeric Limit	10	Continuity_OUTP			
+	MainSequence	Continuity	ID#:3MfKqpo85xGnSACALyEibC	Continuity OUTN Voltage	1001	HSD_DUT_OUT_NEG	.6	0.73	GELE		V	Numeric Limit	10	Continuity_OUTN			
+	MainSequence	DC Startup Settling Voltage	ID#:gLKsRhee7BGbhFy679ViYC	DC Startup Settling Voltage	1100	DAQ_DUT_OUT_DIFF	-400	400	GELE	m	V	Numeric Limit		DC Output_V			
+	MainSequence	Quiescent Current @ 2.8V	ID#:9vVcIvSE7BGbgVy679ViYC	DUT Current Consumption (Vdd = 2.8V)	1200	SMU_DUT_VDD	125	225	GELE	u	A	Numeric Limit		DUT_Out_Current_A			
+	MainSequence	Sensitivity	ID#:DGRI5PSE7BGbgVy679ViYC	Reference Mic dBSPL	1300	DAQ_REFMIC	93.5	94.1	GELE		dBSPL	Numeric Limit		Sensitivity			
+	MainSequence	Sensitivity	ID#:DGRI5PSE7BGbgVy679ViYC	DUT Sensitivity @ 2.8V	1301	DAQ_DUT_OUT_DIFF	-55	-47	GELE		dBV	Numeric Limit		Sensitivity		Locals.DUTSensitivity_dBV	
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	Fresh DUT?	1350		135.5	136.5	GELE			Numeric Limit	20	Pre_OTP			
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	PreTrim Gain	1351				LOG			Numeric Limit		Pre_Gain			
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	PreTrim Vbias	1352				LOG			Numeric Limit		Pre_Vbias			
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	PreTrim Mode	1353		-0.5	0.5	GELE			Numeric Limit	20	Pre_Mode			
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	PreTrim OTP	1354				LOG			Numeric Limit		Pre_OTP		Locals.PreTrimOTP	
+	MainSequence	Read TrimOTP	ID#:HIDBJZI67RGIZSIAICtztC	Pre Trim Read ACK	1355							Pass/Fail	20	Read_ACK			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Target Sensitivity	1400				LOG		dBV	Numeric Limit			FileGlobals.TrimTargetSens_dBV		
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	PreTrim Sensitivity	1401		-55	-47	GELE		dBV	Numeric Limit			Locals.DUTSensitivity_dBV		
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	PreTrim Gain	1402				LOG			Numeric Limit		Pre_Gain			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	PreTrim Vbias	1403				LOG			Numeric Limit		Pre_Vbias			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	PreTrim Mode	1404		-0.5	0.5	GELE			Numeric Limit		Pre_Mode			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	PreTrim OTP	1405				LOG			Numeric Limit		Pre_OTP			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Pre Trim Read ACK	1406							Pass/Fail		Read_ACK			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Gain	1407				LOG			Numeric Limit		Trim_Gain			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Vbias	1408				LOG			Numeric Limit		Trim_Vbias			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Mode	1409		-0.5	0.5	GELE			Numeric Limit		Trim_Mode			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim OTP	1410				LOG			Numeric Limit		Trim_OTP			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim OTP Echo	1411				LOG			Numeric Limit		Trim_Readback			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Write ACK	1412							Pass/Fail		Write_ACK			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Sensitivity	1413		-52	-50	GELE		dBV	Numeric Limit		Trim_Sens			
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Program OTP?	1414				LOG			Numeric Limit			FileGlobals.ProgramOTP?1:0		
+	MainSequence	Sensitivity Trimming	ID#:NdSDIfWE7BGbgVy679ViYC	Trim Method-Gain/G&V/Combo	1415				LOG			Numeric Limit			Val(FileGlobals.TrimMethod)		
+	MainSequence	DEBUG: Sensitivity Trimming - Char	ID#:OgoDbbkZ7RGITOoA6vakDB		No Tests												
+	MainSequence	Frequency Response - Chirp	ID#:fRaxU/SE7BGbgVy679ViYC	Reference Mic dBSPL @ 300Hz	1500	DAQ_REFMIC			LOG		dBSPL	Numeric Limit		Amplitude_300Hz			
+	MainSequence	Frequency Response - Chirp	ID#:fRaxU/SE7BGbgVy679ViYC	DUT dBV @ 300Hz	1501	DAQ_DUT_OUT_DIFF			LOG		dBV	Numeric Limit		Amplitude_300Hz			
+	MainSequence	Frequency Response - Chirp	ID#:fRaxU/SE7BGbgVy679ViYC	Reference Mic dBSPL @ 18kHz	1502	DAQ_REFMIC			LOG		dBSPL	Numeric Limit		Amplitude_18kHz			
+	MainSequence	Frequency Response - Chirp	ID#:fRaxU/SE7BGbgVy679ViYC	DUT dBV @ 18kHz	1503	DAQ_DUT_OUT_DIFF			LOG		dBV	Numeric Limit		Amplitude_18kHz			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	Reference Mic dBSPL @ 100Hz	1501	DAQ_REFMIC	90	95	GELE		dBSPL	Numeric Limit	10	0_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	DUT dBV @ 100Hz	1502	DAQ_DUT_OUT_DIFF	-73	-65	GELE		dBV	Numeric Limit		0_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	Reference Mic dBSPL @ 500Hz	1503	DAQ_REFMIC	93.5	94.1	GELE		dBSPL	Numeric Limit	10	1_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	DUT dBV @ 500Hz	1504	DAQ_DUT_OUT_DIFF	-61	-55	GELE		dBV	Numeric Limit		1_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	Reference Mic dBSPL @ 1kHz	1505	DAQ_REFMIC	93.5	94.1	GELE		dBSPL	Numeric Limit	10	2_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	DUT dBV @ 1kHz	1506	DAQ_DUT_OUT_DIFF	-52	-50	GELE		dBV	Numeric Limit		2_Amplitude		Locals.Sens_1k	
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	Reference Mic dBSPL @ 5kHz	1507	DAQ_REFMIC	93.7	94.3	GELE		dBSPL	Numeric Limit	10	3_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	DUT dBV @ 5kHz	1508	DAQ_DUT_OUT_DIFF	-34	-29	GELE		dBV	Numeric Limit		3_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	Reference Mic dBSPL @ 10kHz	1509	DAQ_REFMIC	93	96	GELE		dBSPL	Numeric Limit	10	4_Amplitude			
+	MainSequence	Frequency Response - Stepped Sine	ID#:6re38zQU7RGISIoAiLJl9A	DUT dBV @ 10kHz	1510	DAQ_DUT_OUT_DIFF	-29	-23	GELE		dBV	Numeric Limit		4_Amplitude			
+	MainSequence	DEBUG: Frequency Response - Stepped Sine Sweep	ID#:B3EfwTYU7RGISIoAiLJl9A		No Tests												
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 94 dBSPL (Vdd=2.8V)	1600	DAQ_REFMIC			LOG		%	Numeric Limit		0_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 94 dBSPL (Vdd=2.8V)	1601	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		0_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 100 dBSPL (Vdd=2.8V)	1602	DAQ_REFMIC			LOG		%	Numeric Limit		6_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 100 dBSPL (Vdd=2.8V)	1603	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		6_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 105 dBSPL (Vdd=2.8V)	1604	DAQ_REFMIC			LOG		%	Numeric Limit		11_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 105 dBSPL (Vdd=2.8V)	1605	DAQ_DUT_OUT_DIFF	0.1	1	GELE		%	Numeric Limit		11_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 110 dBSPL (Vdd=2.8V)	1606	DAQ_REFMIC			LOG		%	Numeric Limit		16_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 110 dBSPL (Vdd=2.8V)	1607	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		16_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 115 dBSPL (Vdd=2.8V)	1608	DAQ_REFMIC			LOG		%	Numeric Limit		21_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 115 dBSPL (Vdd=2.8V)	1609	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		21_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 120 dBSPL (Vdd=2.8V)	1610	DAQ_REFMIC			LOG		%	Numeric Limit		26_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 120 dBSPL (Vdd=2.8V)	1611	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		26_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 125 dBSPL (Vdd=2.8V)	1612	DAQ_REFMIC			LOG		%	Numeric Limit		31_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 125 dBSPL (Vdd=2.8V)	1613	DAQ_DUT_OUT_DIFF	0.3	2.5	GELE		%	Numeric Limit		31_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 130 dBSPL (Vdd=2.8V)	1614	DAQ_REFMIC			LOG		%	Numeric Limit		36_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 130 dBSPL (Vdd=2.8V)	1615	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		36_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 135 dBSPL (Vdd=2.8V)	1616	DAQ_REFMIC			LOG		%	Numeric Limit		41_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 135 dBSPL (Vdd=2.8V)	1617	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		41_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	Ref Mic THD% @ 140 dBSPL (Vdd=2.8V)	1618	DAQ_REFMIC			LOG		%	Numeric Limit		46_THD%			
+	MainSequence	THD @ 2.8V	ID#:hknNdfSE7BGbgVy679ViYC	DUT THD% @ 140 dBSPL (Vdd=2.8V)	1619	DAQ_DUT_OUT_DIFF			LOG		%	Numeric Limit		46_THD%			
+	MainSequence	A-Weighted RMS Noise	ID#:THNWk/SE7BGbgVy679ViYC	Noise_dBA_Low_Noise_Mic	1700	DAQ_LOW_NOISE_MIC			LOG			Numeric Limit		Noise_dBA			
+	MainSequence	A-Weighted RMS Noise	ID#:THNWk/SE7BGbgVy679ViYC	Noise_dBA_Ref_Mic	1701	DAQ_REFMIC			LOG			Numeric Limit		Noise_dBA			
+	MainSequence	A-Weighted RMS Noise	ID#:THNWk/SE7BGbgVy679ViYC	Noise_dBA_DUT	1702	DAQ_DUT_OUT_DIFF	-90	-83	GELE		dBA	Numeric Limit		Noise_dBA		Locals.Noise_dBA	
+	MainSequence	A-Weighted RMS Noise	ID#:THNWk/SE7BGbgVy679ViYC	SNR_DUT	1703		61	68	GELE		dB	Numeric Limit			Locals.Sens_1k- Locals.Noise_dBA+28		
+	MainSequence	DEBUG: A-Weighted RMS Noise	ID#:4cxHedUU7RGISV4AXwcZ6A		No Tests												
+	MainSequence	PSRR	ID#:UKEfo/SE7BGbgVy679ViYC	PSRR_dB 2.8VDC 0.2Vpp 1kHz	1800	DAQ_DUT_OUT_DIFF	-90	-55	GELE		dB	Numeric Limit		PSRR_dB			
+	MainSequence	Output Impedence	ID#:C//V076F7BGbgVy679ViYC	Output_impedance_Ohm	1900		0	50000000	GELE		Ohm	Numeric Limit		Output_impedance_Ohm			
+	MainSequence	Quiescent Current @ 1.6V	ID#:LQ5bKdOe7BGbhFy679ViYC	DUT Current Consumption (Vdd=1.6 V)	2000	SMU_DUT_VDD	95	200	GELE	u	A	Numeric Limit		DUT_Out_Current_A			
+	MainSequence	THD @ 1.6V	ID#:Lg5bKdOe7BGbhFy679ViYC	Ref Mic THD% @ 115 dBSPL (Vdd=1.6V)	2100	DAQ_REFMIC			LOG		%	Numeric Limit		21_THD%			
+	MainSequence	THD @ 1.6V	ID#:Lg5bKdOe7BGbhFy679ViYC	DUT THD% @ 115 dBSPL (Vdd=1.6V)	2101	DAQ_DUT_OUT_DIFF	0.1	1	GELE		%	Numeric Limit		21_THD%			
+	MainSequence	Quiescent Current @ 3.6V	ID#:dFD+P9ZE7RGIZ/YA9mAuUB	DUT Current Consumption (Vdd=3.6 V)	2300	SMU_DUT_VDD	125	275	GELE	u	A	Numeric Limit		DUT_Out_Current_A			
+	MainSequence	Sensitivity @ 3.6V	ID#:AnvNrypE7RGIZ/YA9mAuUB	Reference Mic dBSPL	2200	DAQ_REFMIC	93.5	94.1	GELE		dBSPL	Numeric Limit		Sensitivity			
+	MainSequence	Sensitivity @ 3.6V	ID#:AnvNrypE7RGIZ/YA9mAuUB	DUT Sensitivity @ 3.6V	2201	DAQ_DUT_OUT_DIFF	-55	-47	GELE		dBV	Numeric Limit		Sensitivity		Locals.DUTSensitivity_dBV	
+</SemiconductorModuleTests>

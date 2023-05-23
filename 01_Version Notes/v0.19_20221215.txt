@@ -1,0 +1,16 @@
+Removed changes below in LabVIEW made to test 14.1V Trimming
+
+LabVIEW
+Per site trim ROUT - commented out  selection logic.
+Vbias dB To Word - Hard coded 11111111 into Vbias for 14.1V trimming.
+
+TestStand
+Changed final test limits...
+S
+equences
+Divided calibration into 2 seperate sequences.
+Added GOLDEN sequence that does not perform OTP.
+
+Limits
+-Loosened limits for DC settling
+-Re-adjusted sensitivity for 12.6Vbias

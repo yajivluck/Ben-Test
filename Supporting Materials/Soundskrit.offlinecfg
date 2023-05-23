@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaVersion="1.0" xmlns="http://www.ni.com/TestStand/SemiconductorModule/SystemConfiguration.xsd">
+  <PXIChassis Number="1" Model="NI PXIe-1095">
+    <PXI Name="HSD_6571_C1_S02" Model="NI PXIe-6571" Slot="2" />
+    <PXI Name="DSA_4463_C1_S03" Model="NI PXIe-4463" Slot="3" />
+    <PXI Name="DSA_4463_C1_S04" Model="NI PXIe-4463" Slot="4" />
+    <PXI Name="DSA_4463_C1_S05" Model="NI PXIe-4463" Slot="5" />
+    <PXI Name="DSA_4463_C1_S06" Model="NI PXIe-4463" Slot="6" />
+    <PXI Name="SMU_4163_C1_S07" Model="NI PXIe-4163" Slot="7" />
+    <PXI Name="RLY_2567_C1_S08" Model="NI PXI-2567" Slot="8" />
+    <PXI Name="DAQ_6739_C1_S09" Model="NI PXIe-6739" Slot="9" />
+    <PXI Name="PPS_4110_C1_S12" Model="NI PXI-4110" Slot="12" />
+    <PXI Name="DSA_4464_C1_S13" Model="NI PXIe-4464" Slot="13" />
+    <PXI Name="DSA_4464_C1_S14" Model="NI PXIe-4464" Slot="14" />
+    <PXI Name="DSA_4464_C1_S15" Model="NI PXIe-4464" Slot="15" />
+    <PXI Name="DSA_4464_C1_S16" Model="NI PXIe-4464" Slot="16" />
+    <PXI Name="SMU_4139_C1_S17" Model="NI PXIe-4139" Slot="17" />
+    <PXI Name="DMM_4081_C1_S18" Model="NI PXIe-4081" Slot="18" />
+  </PXIChassis>
+</SystemConfiguration>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="trim">
+    <f:Formula symbol="period">
+      <f:Definition>40 µ</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="clkfreq">
+      <f:Definition>1.2 MHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="clkperiod">
+      <f:Definition>1/trim.clkfreq</f:Definition>
+      <f:Comment>to confirm(833 ns)</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="normalmode">
+      <f:Definition>(128+8192)*trim.clkperiod</f:Definition>
+      <f:Comment>to confrim (6.8 ms)</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="busyperiod">
+      <f:Definition>180 m</f:Definition>
+      <f:Comment>180 ms for 8 bits. Since 25ms/2Bit.</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="porperiod">
+      <f:Definition>33 m</f:Definition>
+      <f:Comment>Power pull low about 30 ms then pull high about 3 ms</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="normaltimeout">
+      <f:Definition>8 m</f:Definition>
+      <f:Comment>8 ms timeout after trim command moves to Normal mode</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOUTP">
+      <f:Definition>5</f:Definition>
+      <f:Comment>Voltage for OUTP during Trim state</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VDD">
+      <f:Definition>5</f:Definition>
+      <f:Comment>Voltage for VDD during Trim state</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VDDCtrl">
+      <f:Definition>5</f:Definition>
+      <f:Comment>Voltage to Gate terminal of NUD3160 Device</f:Comment>
+    </f:Formula>
+  </Section>
+</Specifications>

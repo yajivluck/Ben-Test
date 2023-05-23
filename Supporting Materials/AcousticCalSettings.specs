@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="FunctionalTest">
+    <f:Formula symbol="Limit">
+      <f:Definition>5 dB</f:Definition>
+      <f:Comment>Limit check all site against ideal frequency response</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="SpeakerAmplitude">
+      <f:Definition>1 mV</f:Definition>
+      <f:Comment>Measure frequency response at this speaker test amplitude</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepCoarseStart">
+      <f:Definition>1.005 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepCoarseStop">
+      <f:Definition>20 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepCoarseNumSteps">
+      <f:Definition>40</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineStart">
+      <f:Definition>20 Hz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineStop">
+      <f:Definition>1 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineNumSteps">
+      <f:Definition>20</f:Definition>
+    </f:Formula>
+  </Section>
+  <Section name="Calibration">
+    <f:Formula symbol="FreqSweepCoarseStart">
+      <f:Definition>100 Hz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepCoarseStop">
+      <f:Definition>3 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepCoarseNumSteps">
+      <f:Definition>20</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineStart">
+      <f:Definition>3 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineStop">
+      <f:Definition>20 kHz</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="FreqSweepFineNumSteps">
+      <f:Definition>50</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepCoarseStart">
+      <f:Definition>11 mV</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepCoarseStop">
+      <f:Definition>1 V</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepCoarseNumSteps">
+      <f:Definition>30</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepFineStart">
+      <f:Definition>1 mV</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepFineStop">
+      <f:Definition>10 mV</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="AmplitudeSweepFineNumSteps">
+      <f:Definition>30</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="CalDataStartdBSPL">
+      <f:Definition>90 dB</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="CalDataEnddBSPL">
+      <f:Definition>140 dB</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="CalDatadBSPLIncrement">
+      <f:Definition>1 dB</f:Definition>
+    </f:Formula>
+  </Section>
+</Specifications>

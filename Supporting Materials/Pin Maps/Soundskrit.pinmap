@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PinMap xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.5">
+	<Instruments>
+		<NIDigitalPatternInstrument name="HSD_6571_C1_S02" numberOfChannels="32" group="Digital" />
+		<NIDAQmxTask name="DSA_4463_C1_S03_AO" taskType="AO" channelList="DSA_4463_C1_S03/ao0, DSA_4463_C1_S03/ao1" />
+		<NIDAQmxTask name="DSA_4463_C1_S04_AO" taskType="AO" channelList="DSA_4463_C1_S04/ao0, DSA_4463_C1_S04/ao1" />
+		<NIDAQmxTask name="DSA_4463_C1_S05_AO" taskType="AO" channelList="DSA_4463_C1_S05/ao0, DSA_4463_C1_S05/ao1" />
+		<NIDAQmxTask name="DSA_4463_C1_S06_AO" taskType="AO" channelList="DSA_4463_C1_S06/ao0" />
+		<NIDCPowerInstrument name="SMU_4163_C1_S07" numberOfChannels="24" />
+		<NIRelayDriverModule name="RELAY_2567_C1_S08" numberOfControlLines="64" />
+		<NIDAQmxTask name="DAQ_6739_C1_S09_PSR" taskType="PSR" channelList="DAQ_6739_C1_S09/ao0, DAQ_6739_C1_S09/ao4, DAQ_6739_C1_S09/ao8, DAQ_6739_C1_S09/ao12, DAQ_6739_C1_S09/ao16, DAQ_6739_C1_S09/ao20, DAQ_6739_C1_S09/ao24" />
+		<NIDCPowerInstrument name="PPS_4110_C1_S12" numberOfChannels="3" />
+		<NIDAQmxTask name="DSA_4464_C1_S13_AI_MIC" taskType="AI_MIC" channelList="DSA_4464_C1_S13/ai0, DSA_4464_C1_S13/ai1, DSA_4464_C1_S13/ai2, DSA_4464_C1_S13/ai3" />
+		<NIDAQmxTask name="DSA_4464_C1_S14_AI_MIC" taskType="AI_MIC" channelList="DSA_4464_C1_S14/ai0, DSA_4464_C1_S14/ai1, DSA_4464_C1_S14/ai2" />
+		<NIDAQmxTask name="DSA_4464_C1_S14_REF_AI_MIC" taskType="AI_MIC" channelList="DSA_4464_C1_S14/ai3" />
+		<NIDAQmxTask name="DSA_4464_C1_S15_AI" taskType="AI" channelList="DSA_4464_C1_S15/ai0, DSA_4464_C1_S15/ai1, DSA_4464_C1_S15/ai2, DSA_4464_C1_S15/ai3" />
+		<NIDAQmxTask name="DSA_4464_C1_S16_AI" taskType="AI" channelList="DSA_4464_C1_S16/ai0, DSA_4464_C1_S16/ai1, DSA_4464_C1_S16/ai2" />
+		<NIDCPowerInstrument name="SMU_4139_C1_S17" numberOfChannels="1" />
+		<NIDmmInstrument name="DMM_4081_C1_S18" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="DAQ_DUT_OUT_DIFF" />
+		<DUTPin name="HSD_DUT_OUT_POS" />
+		<DUTPin name="HSD_DUT_OUT_NEG" />
+		<DUTPin name="SMU_DUT_VDD" />
+		<DUTPin name="SMU_DUT_VDD_1" />
+		<DUTPin name="DAQ_DUT_VDD" />
+		<DUTPin name="HSD_DUT_VDD" />
+		<DUTPin name="DAQ_SPEAKER" />
+		<DUTPin name="DAQ_REFMIC" />
+		<SystemPin name="DAQ_LOW_NOISE_MIC" />
+		<DUTPin name="HSD_VDD_CTRL" />
+		<SystemPin name="HSD_OUTC50_CTRL" />
+		<SystemPin name="SMU_BUF_PWR" />
+		<SystemPin name="LB_p5" />
+		<SystemPin name="LB_p15" />
+		<SystemPin name="LB_n15" />
+		<SystemPin name="LB_p30" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="OTP_PINS">
+			<PinReference pin="HSD_DUT_OUT_POS" />
+			<PinReference pin="HSD_DUT_OUT_NEG" />
+			<PinReference pin="HSD_VDD_CTRL" />
+			<PinReference pin="HSD_DUT_VDD" />
+		</PinGroup>
+		<PinGroup name="SMU_VDD_MERGED">
+			<PinReference pin="SMU_DUT_VDD" />
+			<PinReference pin="SMU_DUT_VDD_1" />
+			<PinReference pin="SMU_BUF_PWR" />
+		</PinGroup>
+	</PinGroups>
+	<Relays>
+		<SiteRelay name="RLY_SMU_OR_OTHER" openStateDisplayLabel="SMU_TO_VDD" closedStateDisplayLabel="OTHER_TO_VDD" />
+		<SystemRelay name="RLY_SMU_MERGE" openStateDisplayLabel="SMU_UNMERGE" closedStateDisplayLabel="SMU_MERGE" />
+		<SystemRelay name="RLY_AWG_OR_HSD" openStateDisplayLabel="DAQ_AO_TO_VDD" closedStateDisplayLabel="HSD_TO_VDD" />
+		<SystemRelay name="RLY_LOAD" openStateDisplayLabel="NO_LOAD" closedStateDisplayLabel="LOAD" />
+		<SystemRelay name="RLY_PU" openStateDisplayLabel="NO_PULLUP" closedStateDisplayLabel="PULLUP" />
+		<SystemRelay name="RLY_DSA_HSD" openStateDisplayLabel="DSA_TO_OUT" closedStateDisplayLabel="HSD_TO_OUT" />
+		<SystemRelay name="RLY_DIRECT_AMP" openStateDisplayLabel="AMP_OUT" closedStateDisplayLabel="DIRECT_OUT" />
+		<SystemRelay name="RLY_SE_P_M" openStateDisplayLabel="SE_OUTP" closedStateDisplayLabel="SE_OUTN" />
+		<SystemRelay name="RLY_DUT_OUT_SE_DIFF" openStateDisplayLabel="DIFF" closedStateDisplayLabel="SE" />
+		<SystemRelay name="RLY_SPKR_OFF" openStateDisplayLabel="SPEAKER_ON" closedStateDisplayLabel="SPEAKER_OFF" />
+		<SiteRelay name="RLY_BUF" openStateDisplayLabel="BUFFER" closedStateDisplayLabel="NO_BUFFER" />
+		<SystemRelay name="RLY_OUTC1" />
+		<SystemRelay name="RLY_OUTC2" />
+		<SystemRelay name="RLY_OUTC3" />
+		<SystemRelay name="RLY_OUTC4" />
+		<SystemRelay name="RLY_OUTC5" />
+		<SystemRelay name="RLY_OUTC6" />
+		<SystemRelay name="RLY_OUTC7" />
+		<SystemRelay name="RLY_OUTC8" />
+		<SystemRelay name="RLY_OUTC9" />
+		<SiteRelay name="RLY_ACOUSTIC_OUTC20" closedStateDisplayLabel="TIB_ACOUSTIC_AMP" openStateDisplayLabel="TIB_PARAM_DIRECT" />
+		<SiteRelay name="RLY_PARAM_OUTC21" openStateDisplayLabel="TIB_ACOUSTIC_AMP" closedStateDisplayLabel="TIB_PARAM_DIRECT" />
+		<SystemRelay name="RLY_OUTC50" closedStateDisplayLabel="DIR_BUFFER" openStateDisplayLabel="NO_BUFFER" />
+	</Relays>
+	<RelayConfigurations>
+		<RelayConfiguration name="CONTINUITY_MODE">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_SMU_MERGE" position="Open" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Open" />
+			<RelayPosition relay="RLY_DSA_HSD" position="Closed" />
+			<RelayPosition relay="RLY_LOAD" position="Open" />
+			<RelayPosition relay="RLY_PU" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Open" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Closed" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+			<!--Buffer Card-->
+			<RelayPosition relay="RLY_BUF" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DUT_OUT_SE_POS">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Closed" />
+			<RelayPosition relay="RLY_SE_P_M" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Closed" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Open" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="DUT_OUT_SE_NEG">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Closed" />
+			<RelayPosition relay="RLY_SE_P_M" position="Closed" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Closed" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Open" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="ACOUSTIC_MODE">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_SMU_MERGE" position="Open" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Open" />
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Open" />
+			<RelayPosition relay="RLY_SPKR_OFF" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Closed" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Open" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="OUTPUT_IMP_UNLOADED">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_SMU_MERGE" position="Open" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Open" />
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Closed" />
+			<RelayPosition relay="RLY_DSA_HSD" position="Open" />
+			<RelayPosition relay="RLY_LOAD" position="Open" />
+			<RelayPosition relay="RLY_PU" position="Open" />
+			<RelayPosition relay="RLY_SPKR_OFF" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Open" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Closed" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+			<!--Buffer Card-->
+			<RelayPosition relay="RLY_BUF" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="OUTPUT_IMP_LOADED">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_SMU_MERGE" position="Open" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Open" />
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Closed" />
+			<RelayPosition relay="RLY_DSA_HSD" position="Open" />
+			<RelayPosition relay="RLY_LOAD" position="Closed" />
+			<RelayPosition relay="RLY_PU" position="Open" />
+			<RelayPosition relay="RLY_SPKR_OFF" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Open" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Closed" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+			<!--Buffer Card-->
+			<RelayPosition relay="RLY_BUF" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TRIM_MODE">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_SMU_MERGE" position="Closed" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Open" />
+			<RelayPosition relay="RLY_DSA_HSD" position="Closed" />
+			<RelayPosition relay="RLY_AWG_OR_HSD" position="Closed" />
+			<RelayPosition relay="RLY_LOAD" position="Open" />
+			<RelayPosition relay="RLY_PU" position="Closed" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Open" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Closed" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+			<!--Buffer Card-->
+			<RelayPosition relay="RLY_BUF" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="PSRR_MODE">
+			<!--Load Board-->
+			<RelayPosition relay="RLY_AWG_OR_HSD" position="Open" />
+			<RelayPosition relay="RLY_SMU_OR_OTHER" position="Closed" />
+			<RelayPosition relay="RLY_DIRECT_AMP" position="Open" />
+			<RelayPosition relay="RLY_DUT_OUT_SE_DIFF" position="Open" />
+			<!--TIB Board-->
+			<RelayPosition relay="RLY_ACOUSTIC_OUTC20" position="Closed" />
+			<RelayPosition relay="RLY_PARAM_OUTC21" position="Open" />
+			<RelayPosition relay="RLY_OUTC50" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TURN_OFF_SPEAKER">
+			<RelayPosition relay="RLY_SPKR_OFF" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TURN_ON_SPEAKER">
+			<RelayPosition relay="RLY_SPKR_OFF" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_ALL_UNITY_GAIN">
+			<RelayPosition relay="RLY_OUTC1" position="Closed" />
+			<RelayPosition relay="RLY_OUTC2" position="Open" />
+			<RelayPosition relay="RLY_OUTC3" position="Open" />
+			<RelayPosition relay="RLY_OUTC4" position="Open" />
+			<RelayPosition relay="RLY_OUTC5" position="Open" />
+			<RelayPosition relay="RLY_OUTC6" position="Open" />
+			<RelayPosition relay="RLY_OUTC7" position="Closed" />
+			<RelayPosition relay="RLY_OUTC8" position="Open" />
+			<RelayPosition relay="RLY_OUTC9" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_REFMIC_GAIN_1">
+			<RelayPosition relay="RLY_OUTC1" position="Open" />
+			<RelayPosition relay="RLY_OUTC2" position="Open" />
+			<RelayPosition relay="RLY_OUTC3" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_REFMIC_GAIN_3">
+			<RelayPosition relay="RLY_OUTC1" position="Closed" />
+			<RelayPosition relay="RLY_OUTC2" position="Open" />
+			<RelayPosition relay="RLY_OUTC3" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_REFMIC_GAIN_20">
+			<RelayPosition relay="RLY_OUTC1" position="Open" />
+			<RelayPosition relay="RLY_OUTC2" position="Closed" />
+			<RelayPosition relay="RLY_OUTC3" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_REFMIC_GAIN_40">
+			<RelayPosition relay="RLY_OUTC1" position="Open" />
+			<RelayPosition relay="RLY_OUTC2" position="Open" />
+			<RelayPosition relay="RLY_OUTC3" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_DUT_GAIN_1">
+			<RelayPosition relay="RLY_OUTC4" position="Open" />
+			<RelayPosition relay="RLY_OUTC5" position="Open" />
+			<RelayPosition relay="RLY_OUTC6" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_DUT_GAIN_3">
+			<RelayPosition relay="RLY_OUTC4" position="Closed" />
+			<RelayPosition relay="RLY_OUTC5" position="Open" />
+			<RelayPosition relay="RLY_OUTC6" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_DUT_GAIN_20">
+			<RelayPosition relay="RLY_OUTC4" position="Open" />
+			<RelayPosition relay="RLY_OUTC5" position="Closed" />
+			<RelayPosition relay="RLY_OUTC6" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_DUT_GAIN_40">
+			<RelayPosition relay="RLY_OUTC4" position="Open" />
+			<RelayPosition relay="RLY_OUTC5" position="Open" />
+			<RelayPosition relay="RLY_OUTC6" position="Closed" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_LOWNOISEMIC_GAIN_1">
+			<RelayPosition relay="RLY_OUTC7" position="Open" />
+			<RelayPosition relay="RLY_OUTC8" position="Open" />
+			<RelayPosition relay="RLY_OUTC9" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_LOWNOISEMIC_GAIN_3">
+			<RelayPosition relay="RLY_OUTC7" position="Closed" />
+			<RelayPosition relay="RLY_OUTC8" position="Open" />
+			<RelayPosition relay="RLY_OUTC9" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_LOWNOISEMIC_GAIN_20">
+			<RelayPosition relay="RLY_OUTC7" position="Open" />
+			<RelayPosition relay="RLY_OUTC8" position="Closed" />
+			<RelayPosition relay="RLY_OUTC9" position="Open" />
+		</RelayConfiguration>
+		<RelayConfiguration name="TIB_LOWNOISEMIC_GAIN_40">
+			<RelayPosition relay="RLY_OUTC7" position="Open" />
+			<RelayPosition relay="RLY_OUTC8" position="Open" />
+			<RelayPosition relay="RLY_OUTC9" position="Closed" />
+		</RelayConfiguration>
+	</RelayConfigurations>
+	<Sites>
+		<Site siteNumber="0" />
+		<Site siteNumber="1" />
+		<Site siteNumber="2" />
+		<Site siteNumber="3" />
+		<Site siteNumber="4" />
+		<Site siteNumber="5" />
+		<Site siteNumber="6" />
+	</Sites>
+	<Connections>
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="0" instrument="DSA_4464_C1_S15_AI" channel="DSA_4464_C1_S15/ai0" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="1" instrument="DSA_4464_C1_S15_AI" channel=" DSA_4464_C1_S15/ai1" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="2" instrument="DSA_4464_C1_S15_AI" channel=" DSA_4464_C1_S15/ai2" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="3" instrument="DSA_4464_C1_S15_AI" channel=" DSA_4464_C1_S15/ai3" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="4" instrument="DSA_4464_C1_S16_AI" channel="DSA_4464_C1_S16/ai0" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="5" instrument="DSA_4464_C1_S16_AI" channel=" DSA_4464_C1_S16/ai1" />
+		<Connection pin="DAQ_DUT_OUT_DIFF" siteNumber="6" instrument="DSA_4464_C1_S16_AI" channel=" DSA_4464_C1_S16/ai2" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="0" instrument="DAQ_6739_C1_S09_PSR" channel="DAQ_6739_C1_S09/ao0" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="1" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao4" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="2" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao8" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="3" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao12" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="4" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao16" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="5" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao20" />
+		<Connection pin="DAQ_DUT_VDD" siteNumber="6" instrument="DAQ_6739_C1_S09_PSR" channel=" DAQ_6739_C1_S09/ao24" />
+		<Connection pin="DAQ_REFMIC" siteNumber="0" instrument="DSA_4464_C1_S13_AI_MIC" channel="DSA_4464_C1_S13/ai0" />
+		<Connection pin="DAQ_REFMIC" siteNumber="1" instrument="DSA_4464_C1_S13_AI_MIC" channel=" DSA_4464_C1_S13/ai1" />
+		<Connection pin="DAQ_REFMIC" siteNumber="2" instrument="DSA_4464_C1_S13_AI_MIC" channel=" DSA_4464_C1_S13/ai2" />
+		<Connection pin="DAQ_REFMIC" siteNumber="3" instrument="DSA_4464_C1_S13_AI_MIC" channel=" DSA_4464_C1_S13/ai3" />
+		<Connection pin="DAQ_REFMIC" siteNumber="4" instrument="DSA_4464_C1_S14_AI_MIC" channel="DSA_4464_C1_S14/ai0" />
+		<Connection pin="DAQ_REFMIC" siteNumber="5" instrument="DSA_4464_C1_S14_AI_MIC" channel=" DSA_4464_C1_S14/ai1" />
+		<Connection pin="DAQ_REFMIC" siteNumber="6" instrument="DSA_4464_C1_S14_AI_MIC" channel=" DSA_4464_C1_S14/ai2" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="0" instrument="DSA_4463_C1_S03_AO" channel="DSA_4463_C1_S03/ao0" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="1" instrument="DSA_4463_C1_S03_AO" channel=" DSA_4463_C1_S03/ao1" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="2" instrument="DSA_4463_C1_S04_AO" channel="DSA_4463_C1_S04/ao0" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="3" instrument="DSA_4463_C1_S04_AO" channel=" DSA_4463_C1_S04/ao1" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="4" instrument="DSA_4463_C1_S05_AO" channel="DSA_4463_C1_S05/ao0" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="5" instrument="DSA_4463_C1_S05_AO" channel=" DSA_4463_C1_S05/ao1" />
+		<Connection pin="DAQ_SPEAKER" siteNumber="6" instrument="DSA_4463_C1_S06_AO" channel="DSA_4463_C1_S06/ao0" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="0" instrument="HSD_6571_C1_S02" channel="1" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="1" instrument="HSD_6571_C1_S02" channel="5" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="2" instrument="HSD_6571_C1_S02" channel="9" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="3" instrument="HSD_6571_C1_S02" channel="13" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="4" instrument="HSD_6571_C1_S02" channel="17" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="5" instrument="HSD_6571_C1_S02" channel="21" />
+		<Connection pin="HSD_DUT_OUT_NEG" siteNumber="6" instrument="HSD_6571_C1_S02" channel="25" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="0" instrument="HSD_6571_C1_S02" channel="0" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="1" instrument="HSD_6571_C1_S02" channel="4" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="2" instrument="HSD_6571_C1_S02" channel="8" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="3" instrument="HSD_6571_C1_S02" channel="12" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="4" instrument="HSD_6571_C1_S02" channel="16" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="5" instrument="HSD_6571_C1_S02" channel="20" />
+		<Connection pin="HSD_DUT_OUT_POS" siteNumber="6" instrument="HSD_6571_C1_S02" channel="24" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="0" instrument="HSD_6571_C1_S02" channel="2" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="1" instrument="HSD_6571_C1_S02" channel="6" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="2" instrument="HSD_6571_C1_S02" channel="10" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="3" instrument="HSD_6571_C1_S02" channel="14" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="4" instrument="HSD_6571_C1_S02" channel="18" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="5" instrument="HSD_6571_C1_S02" channel="22" />
+		<Connection pin="HSD_DUT_VDD" siteNumber="6" instrument="HSD_6571_C1_S02" channel="26" />
+		<Connection pin="HSD_VDD_CTRL" siteNumber="0,1" instrument="HSD_6571_C1_S02" channel="3" />
+		<Connection pin="HSD_VDD_CTRL" siteNumber="2,3" instrument="HSD_6571_C1_S02" channel="11" />
+		<Connection pin="HSD_VDD_CTRL" siteNumber="4,5" instrument="HSD_6571_C1_S02" channel="19" />
+		<Connection pin="HSD_VDD_CTRL" siteNumber="6" instrument="HSD_6571_C1_S02" channel="27" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="0" instrument="SMU_4163_C1_S07" channel="0" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="1" instrument="SMU_4163_C1_S07" channel="1" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="2" instrument="SMU_4163_C1_S07" channel="2" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="3" instrument="SMU_4163_C1_S07" channel="3" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="4" instrument="SMU_4163_C1_S07" channel="4" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="5" instrument="SMU_4163_C1_S07" channel="5" />
+		<Connection pin="SMU_DUT_VDD" siteNumber="6" instrument="SMU_4163_C1_S07" channel="6" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="0" instrument="SMU_4163_C1_S07" channel="12" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="1" instrument="SMU_4163_C1_S07" channel="13" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="2" instrument="SMU_4163_C1_S07" channel="14" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="3" instrument="SMU_4163_C1_S07" channel="15" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="4" instrument="SMU_4163_C1_S07" channel="16" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="5" instrument="SMU_4163_C1_S07" channel="17" />
+		<Connection pin="SMU_DUT_VDD_1" siteNumber="6" instrument="SMU_4163_C1_S07" channel="18" />
+		<SystemConnection pin="SMU_BUF_PWR" instrument="SMU_4163_C1_S07" channel="7" />
+		<SystemConnection pin="DAQ_LOW_NOISE_MIC" instrument="DSA_4464_C1_S14_REF_AI_MIC" channel="DSA_4464_C1_S14/ai3" />
+		<SystemConnection pin="HSD_OUTC50_CTRL" instrument="HSD_6571_C1_S02" channel="28" />
+		<SystemConnection pin="LB_n15" instrument="PPS_4110_C1_S12" channel="2" />
+		<SystemConnection pin="LB_p15" instrument="PPS_4110_C1_S12" channel="1" />
+		<SystemConnection pin="LB_p30" instrument="SMU_4139_C1_S17" channel="0" />
+		<SystemConnection pin="LB_p5" instrument="PPS_4110_C1_S12" channel="0" />
+		<RelayConnection relay="RLY_ACOUSTIC_OUTC20" siteNumber="0,1,2,3" relayDriverModule="RELAY_2567_C1_S08" controlLine="K17" />
+		<RelayConnection relay="RLY_ACOUSTIC_OUTC20" siteNumber="4,5,6" relayDriverModule="RELAY_2567_C1_S08" controlLine="K18" />
+		<RelayConnection relay="RLY_BUF" siteNumber="0,2" relayDriverModule="RELAY_2567_C1_S08" controlLine="K25" />
+		<RelayConnection relay="RLY_BUF" siteNumber="4,6" relayDriverModule="RELAY_2567_C1_S08" controlLine="K27" />
+		<RelayConnection relay="RLY_BUF" siteNumber="1,3" relayDriverModule="RELAY_2567_C1_S08" controlLine="K26" />
+		<RelayConnection relay="RLY_BUF" siteNumber="5" relayDriverModule="RELAY_2567_C1_S08" controlLine="K28" />
+		<RelayConnection relay="RLY_PARAM_OUTC21" siteNumber="0,1,2,3" relayDriverModule="RELAY_2567_C1_S08" controlLine="K19" />
+		<RelayConnection relay="RLY_PARAM_OUTC21" siteNumber="4,5,6" relayDriverModule="RELAY_2567_C1_S08" controlLine="K20" />
+		<RelayConnection relay="RLY_SMU_OR_OTHER" siteNumber="0,1" relayDriverModule="RELAY_2567_C1_S08" controlLine="K41" />
+		<RelayConnection relay="RLY_SMU_OR_OTHER" siteNumber="2,3" relayDriverModule="RELAY_2567_C1_S08" controlLine="K42" />
+		<RelayConnection relay="RLY_SMU_OR_OTHER" siteNumber="4,5" relayDriverModule="RELAY_2567_C1_S08" controlLine="K38" />
+		<RelayConnection relay="RLY_SMU_OR_OTHER" siteNumber="6" relayDriverModule="RELAY_2567_C1_S08" controlLine="K43" />
+		<SystemRelayConnection relay="RLY_AWG_OR_HSD" relayDriverModule="RELAY_2567_C1_S08" controlLine="K39" />
+		<SystemRelayConnection relay="RLY_DIRECT_AMP" relayDriverModule="RELAY_2567_C1_S08" controlLine="K34" />
+		<SystemRelayConnection relay="RLY_DSA_HSD" relayDriverModule="RELAY_2567_C1_S08" controlLine="K35" />
+		<SystemRelayConnection relay="RLY_DUT_OUT_SE_DIFF" relayDriverModule="RELAY_2567_C1_S08" controlLine="K32" />
+		<SystemRelayConnection relay="RLY_LOAD" relayDriverModule="RELAY_2567_C1_S08" controlLine="K37" />
+		<SystemRelayConnection relay="RLY_OUTC1" relayDriverModule="RELAY_2567_C1_S08" controlLine="K0" />
+		<SystemRelayConnection relay="RLY_OUTC2" relayDriverModule="RELAY_2567_C1_S08" controlLine="K1" />
+		<SystemRelayConnection relay="RLY_OUTC3" relayDriverModule="RELAY_2567_C1_S08" controlLine="K2" />
+		<SystemRelayConnection relay="RLY_OUTC4" relayDriverModule="RELAY_2567_C1_S08" controlLine="K3" />
+		<SystemRelayConnection relay="RLY_OUTC5" relayDriverModule="RELAY_2567_C1_S08" controlLine="K4" />
+		<SystemRelayConnection relay="RLY_OUTC50" relayDriverModule="RELAY_2567_C1_S08" controlLine="K24" />
+		<SystemRelayConnection relay="RLY_OUTC6" relayDriverModule="RELAY_2567_C1_S08" controlLine="K5" />
+		<SystemRelayConnection relay="RLY_OUTC7" relayDriverModule="RELAY_2567_C1_S08" controlLine="K6" />
+		<SystemRelayConnection relay="RLY_OUTC8" relayDriverModule="RELAY_2567_C1_S08" controlLine="K7" />
+		<SystemRelayConnection relay="RLY_OUTC9" relayDriverModule="RELAY_2567_C1_S08" controlLine="K16" />
+		<SystemRelayConnection relay="RLY_PU" relayDriverModule="RELAY_2567_C1_S08" controlLine="K36" />
+		<SystemRelayConnection relay="RLY_SE_P_M" relayDriverModule="RELAY_2567_C1_S08" controlLine="K33" />
+		<SystemRelayConnection relay="RLY_SMU_MERGE" relayDriverModule="RELAY_2567_C1_S08" controlLine="K40" />
+		<SystemRelayConnection relay="RLY_SPKR_OFF" relayDriverModule="RELAY_2567_C1_S08" controlLine="K10" />
+	</Connections>
+</PinMap>

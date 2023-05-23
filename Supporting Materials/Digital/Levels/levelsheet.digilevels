@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="HSD_DUT_VDD">
+        <Vil>0</Vil>
+        <Vih>trim.VDD</Vih>
+        <Vol>0.3 * trim.VDD</Vol>
+        <Voh>0.7 * trim.VDD</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="HSD_VDD_CTRL">
+        <Vil>0</Vil>
+        <Vih>trim.VDDCtrl</Vih>
+        <Vol>0.3 * trim.VDDCtrl</Vol>
+        <Voh>0.7 * trim.VDDCtrl</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="HSD_DUT_OUT_POS">
+        <Vil>0</Vil>
+        <Vih>trim.VOUTP</Vih>
+        <Vol>0.3 * trim.VOUTP</Vol>
+        <Voh>0.7 * trim.VOUTP</Voh>
+        <Iol>1.5 mA</Iol>
+        <Ioh>-1.5 mA</Ioh>
+        <Vcom>4.2</Vcom>
+        <TerminationMode>ActiveLoad</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="HSD_DUT_OUT_NEG">
+        <Vil>0</Vil>
+        <Vih>trim.VOUTP</Vih>
+        <Vol>0.3 * trim.VOUTP</Vol>
+        <Voh>0.7 * trim.VOUTP</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="HSD_OUTC50_CTRL">
+        <Vil>0</Vil>
+        <Vih>trim.VDDCtrl</Vih>
+        <Vol>0.3 * trim.VDDCtrl</Vol>
+        <Voh>0.7 * trim.VDDCtrl</Voh>
+        <TerminationMode>HighZ</TerminationMode>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>
